@@ -812,6 +812,12 @@ if [ "$brand" = OPPO ] || [ "$brand" = realme ]; then
     resetprop_phh ro.boot.flash.locked 1
     resetprop_phh ro.boot.vbmeta.device_state locked
     resetprop_phh ro.boot.verifiedbootstate green
+    resetprop_phh ro.boot.warranty_bit 0
+    resetprop_phh ro.vendor.warranty_bit 0
+    resetprop_phh ro.warranty_bit 0
+    resetprop_phh -n sys.oem_unlock_allowed 0
+    # Stop the vendor root check service if it exists as an init service
+    setprop ctl.stop oppo_root_check 2>/dev/null
 fi
 
 if [ -f /system/phh/secure ] || [ -f /metadata/phh/secure ];then
