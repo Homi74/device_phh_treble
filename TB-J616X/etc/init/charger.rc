@@ -1,0 +1,6 @@
+on charger && property:ro.hardware=mt6785
+    write /sys/class/leds/lcd-backlight/trigger "none"
+    write /sys/class/leds/lcd-backlight/brightness 128
+    write /sys/class/android_usb/android0/enable 1
+    setprop ro.charger.disable_init_blank true
+    setprop ro.charger.enable_suspend false

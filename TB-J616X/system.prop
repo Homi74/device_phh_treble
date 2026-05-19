@@ -1,0 +1,73 @@
+# Platform
+ro.board.platform=mt6785
+
+# Lenovo USB fix
+ro.odm.lenovo.series=Lenovo Tab P11 Plus
+
+# VoLTE / IMS
+ro.telephony.default_network=9
+ro.vendor.md_auto_setup_ims=1
+persist.vendor.ims_support=1
+persist.vendor.mtk_dynamic_ims_switch=1
+persist.vendor.volte_support=1
+persist.vendor.mtk.volte.enable=1
+persist.vendor.mtk_ct_volte_support=3
+
+# MTK RIL - Single SIM
+ro.vendor.mtk_ril_mode=c6m_1rild
+ro.vendor.mtk_rild_read_imsi=1
+ro.vendor.num_md_protocol=2
+ro.vendor.radio.max.multisim=ss
+persist.radio.multisim.config=ss
+
+# WiFi AP
+ro.vendor.wifi.sap.interface=ap0
+ro.vendor.wifi.sap.concurrent.iface=ap1
+
+# Display
+ro.surface_flinger.primary_display_orientation=ORIENTATION_180
+
+# Audio - Awinic 4 reproduktory
+vendor.audio.i2son.enable=1
+
+# Bluetooth
+persist.bluetooth.a2dp_offload.disabled=true
+bluetooth.profile.a2dp.source.enabled=true
+bluetooth.profile.a2dp.sink.enabled=true
+bluetooth.profile.hfp.enabled=true
+bluetooth.profile.avrcp.target.enabled=true
+
+# Vynucení Bluetooth Battery Service profilu na úrovni stacku
+bluetooth.profile.bas.enabled=true
+
+# Vynucení Bluetooth Low Energy Battery service a GATT baterií
+bluetooth.profile.gatt.enabled=true
+bluetooth.gatt.battery_service=true
+
+# Vypnutí hardwarového offloadu pro Bluetooth audio (přenese AAC na SW stack)
+ro.bluetooth.a2dp_offload.supported=false
+persist.bluetooth.a2dp_offload.disabled=true
+
+# Vynucení hlasových vlastností a HFP profilu pro oklamání stacku
+ro.config.vc_call_vol_default=4
+ro.telephony.iwlan_operation_mode=legacy
+bluetooth.profile.hfp.enabled=true
+bluetooth.profile.hfp.ag.enabled=true
+
+# Play Integrity spoofing
+ro.vendor.build.fingerprint=Lenovo/TB-J616X/TB-J616X:12/SP1A.210812.016/TB-J616X_S240253_241016_ROW:user/release-keys
+
+# Device name
+ro.product.model=Lenovo TB-J616X
+ro.product.product.model=Lenovo TB-J616X
+
+# Region (Cestina)
+persist.sys.locale=cs-CZ
+
+# Pomoc pro NetworkStack
+net.tethering.n_offload=0
+persist.sys.phh.main_interface=wlan0
+
+# Fix UI rychleho nabijeni
+ro.vendor.charge.turbo.cap=1
+persist.vendor.pps.disallowed=0

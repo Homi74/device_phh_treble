@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <bool name="config_enableLockScreenRotation">true</bool>
+	<bool name="config_bluetooth_btservice_profiles_battery">true</bool>
+	<bool name="config_bluetooth_a2dp_offload_disabled">true</bool>
+    <bool name="config_bluetooth_address_validation">false</bool>
+    <bool name="config_remote_consumer_battery_management">true</bool>
+	<bool name="config_voice_capable">true</bool>
+    <bool name="config_sms_capable">true</bool>
+    <bool name="config_bluetooth_btservice_profiles_hfp_hf">true</bool>
+	<string name="config_default_device_name" translatable="false">Lenovo Tab P11 Plus</string>
+</resources>

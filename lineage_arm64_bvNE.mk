@@ -10,7 +10,7 @@ PRODUCT_BRAND := google
 PRODUCT_MODEL := Generic System
 
 # Overwrite the inherited "emulator" characteristics
-PRODUCT_CHARACTERISTICS := device
+PRODUCT_CHARACTERISTICS := phone
 
 LINEAGE_BUILDTYPE := VANILLA
 LINEAGE_BUILD := GSI

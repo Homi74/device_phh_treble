@@ -1,0 +1,71 @@
+on init
+    restart volte_md_status
+
+service volte_md_status /system/vendor/bin/volte_md_status
+    class core
+    user system
+    group radio log system
+    oneshot
+    disabled
+
+on property:vendor.volte_md_status=ready
+    restart volte_imsm_93
+    restart vendor.volte_stack
+    restart vendor.volte_ua
+    restart vendor.volte_imcb
+
+on property:vendor.volte_md_status=reset
+    rm /dev/radio/pttyims
+    rm /dev/radio/ptty2ims
+    rm /dev/radio/ptty3ims
+    rm /dev/radio/ptty4ims
+    stop vendor.volte_imcb
+    stop vendor.volte_ua
+    stop vendor.volte_stack
+    stop volte_imsm_93
+
+on property:vendor.volte_md_status=stop
+    rm /dev/radio/pttyims
+    rm /dev/radio/ptty2ims
+    rm /dev/radio/ptty3ims
+    rm /dev/radio/ptty4ims
+    stop vendor.volte_imcb
+    stop vendor.volte_ua
+    stop vendor.volte_stack
+    stop volte_imsm_93
+
+service volte_imsm_93 /vendor/bin/volte_imsm_93
+    class main
+    user system
+    group radio cache inet misc log system wifi net_raw
+    capabilities NET_RAW NET_ADMIN
+    oneshot
+    disabled
+
+service vendor.volte_stack /vendor/bin/volte_stack
+    class main
+    socket volte_stack stream 660 system system
+    user system
+    group system log inet radio
+    capabilities NET_ADMIN
+    oneshot
+    disabled
+
+service vendor.volte_ua /vendor/bin/volte_ua
+    class main
+    socket volte_ua stream 660 system system
+    user radio
+    group system log inet radio net_admin
+    oneshot
+    disabled
+
+service vendor.volte_imcb /vendor/bin/volte_imcb
+    class main
+    socket volte_imsa1 stream 660 system radio
+    socket volte_imsa2 stream 660 system radio
+    socket volte_ut stream 660 system radio
+    user system
+    group system log inet radio
+    oneshot
+    disabled
+    capabilities WAKE_ALARM
