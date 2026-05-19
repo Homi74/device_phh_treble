@@ -253,3 +253,4 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.settings.large_screen_opt.enabled=true
 PRODUCT_PACKAGES += audio.bluetooth.default
+$(call inherit-product-if-exists, device/phh/treble/TB-J616X/device.mk)
