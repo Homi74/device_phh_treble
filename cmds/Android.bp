@@ -38,18 +38,6 @@ cc_binary {
 }
 
 cc_binary {
-	name: "vibrator-lge",
-	srcs: [
-		"vibrator-lge.cpp",
-	],
-	shared_libs: [
-		"vendor.lge.hardware.vibrator@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
 	name: "mtk-sms-fwk-ready",
 	srcs: [
 		"mtk-sms-fwk-ready.cpp",
