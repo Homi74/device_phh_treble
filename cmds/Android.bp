@@ -53,66 +53,6 @@ cc_binary {
 }
 
 cc_binary {
-	name: "xiaomi-display-feature",
-	srcs: [
-		"xiaomi-display-feature.cpp",
-	],
-	shared_libs: [
-		"vendor.xiaomi.hardware.displayfeature@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "xiaomi-fp",
-	srcs: [
-		"xiaomi-fp.cpp",
-	],
-	shared_libs: [
-		"vendor.xiaomi.hardware.fingerprintextension@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "lightsctl-sec",
-	srcs: [
-		"lightsctl-sec.cpp",
-	],
-	shared_libs: [
-		"vendor.samsung.hardware.light@2.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "lightsctl-seh",
-	srcs: [
-		"lightsctl-seh.cpp",
-	],
-	shared_libs: [
-		"vendor.samsung.hardware.light@3.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "xiaomi-motor",
-	srcs: [
-		"xiaomi-motor.cpp",
-	],
-	shared_libs: [
-		"vendor.xiaomi.hardware.motor@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
 	name: "oneplus-motor",
 	srcs: [
 		"oneplus-motor.cpp",
@@ -141,46 +81,9 @@ cc_binary {
 }
 
 cc_binary {
-	name: "lightsctl-huawei",
-	srcs: [
-		"lightsctl-huawei.cpp",
-	],
-	shared_libs: [
-		"vendor.huawei.hardware.light@2.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
 	name: "asus-motor",
 	srcs: [
 		"asus-motor.cpp",
-	],
-}
-
-cc_binary {
-	name: "goodix-fp",
-	srcs: [
-		"goodix-fp.cpp",
-	],
-	shared_libs: [
-		"vendor.goodix.extend.service@2.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "sec-camera-list",
-	srcs: [
-		"sec-camera-list.cpp",
-	],
-	shared_libs: [
-		"vendor.samsung.hardware.camera.provider@4.0",
-		"vendor.samsung.hardware.camera.provider@3.0",
-		"libutils",
-		"libhidlbase",
 	],
 }
 
@@ -202,35 +105,6 @@ cc_binary {
 }
 
 cc_binary {
-	name: "sec-ril",
-	srcs: [
-		"sec-ril.cpp",
-	],
-	shared_libs: [
-		"android.hardware.radio@1.6",
-		"vendor.samsung.hardware.radio@2.0",
-		"vendor.samsung.hardware.radio@2.1",
-		"vendor.samsung.hardware.radio@2.2",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "sec-torch",
-	srcs: [
-		"sec-torch.cpp",
-	],
-	shared_libs: [
-		"vendor.samsung.hardware.camera.provider@4.0",
-		"vendor.samsung.hardware.camera.provider@3.0",
-		"vendor.samsung.hardware.camera.device@5.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
 	name: "lightsctl-aidl",
 	srcs: [
 		"lightsctl-aidl.cpp",
@@ -240,33 +114,6 @@ cc_binary {
 		"libutils",
 		"libhidlbase",
 		"libbinder",
-	],
-}
-
-cc_binary {
-	name: "slsi-ddiscaler",
-	srcs: [
-		"slsi-ddiscaler.cpp",
-	],
-	shared_libs: [
-		"vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "slsi-booted",
-	srcs: [
-		"slsi-booted.cpp",
-	],
-	shared_libs: [
-		"vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-	init_rc: [
-		"slsi-booted.rc"
 	],
 }
 
