@@ -93,11 +93,8 @@ endif
 
 PRODUCT_PACKAGES += \
     android.hidl.manager-V1.0-java \
-    vendor.huawei.hardware.biometrics.fingerprint-V2.1-java \
-    vendor.huawei.hardware.tp-V1.0-java \
     vendor.qti.hardware.radio.am-V1.0-java \
     vendor.qti.qcril.am-V1.0-java \
-    vendor.xiaomi.hardware.displayfeature-V1.0-java
 
 PRODUCT_COPY_FILES += \
     device/phh/treble/interfaces.xml:system/etc/permissions/interfaces.xml
@@ -155,8 +152,6 @@ PRODUCT_PACKAGES += \
 
 # Helper to debug Xiaomi motorized camera
 PRODUCT_PACKAGES += \
-    xiaomi-motor \
-    oneplus-motor
 
 PRODUCT_PACKAGES += \
     Stk
@@ -192,8 +187,6 @@ PRODUCT_COPY_FILES += \
     device/phh/treble/remote/phh-remotectl.sh:system/bin/phh-remotectl.sh \
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.oppo.compat \
-    android.hardware.biometrics.fingerprint@2.1-service.oplus.compat \
 
 PRODUCT_PACKAGES += \
     curl
@@ -211,7 +204,6 @@ PRODUCT_PACKAGES += \
     NavigationBarMode2ButtonOverlay
 
 PRODUCT_PACKAGES += \
-    oplus-alert-slider
 
 PRODUCT_COPY_FILES += \
     device/phh/treble/overrides/nothing.txt:system/etc/smartpa_params/empty \
@@ -223,7 +215,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += phh-ota
 
 PRODUCT_PACKAGES += \
-    xiaomi-touch
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration_7_0.xml:system/etc/a2dp_audio_policy_configuration_7_0.xml \
@@ -243,7 +234,6 @@ PRODUCT_PACKAGES += \
     QcRilAm
 
 PRODUCT_PACKAGES += \
-    slsi-booted \
     Iwlan \
     QualifiedNetworksService \
     MtkInCallService \
